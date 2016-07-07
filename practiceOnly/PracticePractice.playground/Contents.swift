@@ -37,7 +37,7 @@ let forcedString = possibleString! // Need !
 
 let assumedString: String! = "this is an implicity unwrapped optional string!"
 // We strongly clame that assumed string have value and type of string
-let implicitString = assumedString // Doesnt need !
+let implicitString = assumedString // Doesn't need !
 
 if implicitString != nil {
   print(implicitString)
@@ -136,8 +136,8 @@ for index in dobroJutro.characters.indices {
 }
 // long
 if dobroJutro.isEmpty == false {
-    for index in 1..<dobroJutro.characters.count {
-        print("Character: \(index) is: \(dobroJutro[dobroJutro.startIndex.advancedBy(index)])")
+    for index in 1...dobroJutro.characters.count {
+        print("Character: \(index) is: \(dobroJutro[dobroJutro.startIndex.advancedBy(index - 1)])")
         // Printing number of character and than character
     }
 } else {
@@ -145,7 +145,7 @@ if dobroJutro.isEmpty == false {
 }
 // Short version
 for i in dobroJutro.characters.indices {
-    print("Character \(i) is: \(dobroJutro[i])", terminator: "")
+    print("Character \(i) is: \(dobroJutro[i])", separator: " ")
 }
 
 dobroJutro.insertContentsOf("This is just a test: ".characters, at: dobroJutro.startIndex)
