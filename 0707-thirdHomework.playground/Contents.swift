@@ -41,11 +41,20 @@ for i in arrayOfNums {
 
 let footballClubs = ["Barcelona", "Real Madrid", "Chelsea", "Machester city", "Manchester united"]
 var favouriteClub = "My favourite football club is: "
-for i in footballClubs {
-    favouriteClub += "\(i),"
-}
-print(favouriteClub)
 
+footballClubs.count
+footballClubs.endIndex
+
+for i in 0..<footballClubs.count {
+    
+    favouriteClub += "\(footballClubs[i])"
+    
+    if i < (footballClubs.count - 1) { 
+        favouriteClub += " ,"
+    }
+}
+
+print(favouriteClub)
 
 //  While loops //
 
