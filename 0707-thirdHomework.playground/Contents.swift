@@ -188,8 +188,8 @@ while setOfStrings.isEmpty == false {
 
 //  Switch statement //
 
-let weekDictionary: [Int: String] = [1: "Ponedeljak", 2: "Utorak", 3: "Srijeda", 4: "Cetvrtak", 5: "Petak", 6: "Subota" , 7: "Nedelja"]
-var today = String!(weekDictionary[2]) // We use String! because weekDictionary returns Optional value
+let weekDictionary: [String: String] = ["Po": "Ponedeljak", "Ut": "Utorak", "Sr": "Srijeda", "Ce": "Cetvrtak", "Pe": "Petak", "Su": "Subota" , "Ne": "Nedelja"]
+var today = String!(weekDictionary["Po"]) // We use String! because weekDictionary returns Optional value
 
 switch today {
     case "Ponedeljak":
@@ -207,7 +207,7 @@ switch today {
     case "Nedelja":
         print("Danas je \(today)")
     default:
-        print("This is just a default message")
+        print("Dan koji si unio ne postoji ")
     
 }
 
