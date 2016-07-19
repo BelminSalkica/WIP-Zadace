@@ -1,14 +1,9 @@
-// This is my five homework  //
+// This is my fourth homework  //
 // >>>>>>>>>>  OOP  <<<<<<<< //
 
 import Foundation
 
-// Assignment 1 //
-// Part 1 //
-
-// 1. //
-
-// Struct // 
+//  >>>> STRUCTS  <<<< //
 
 struct Location {
     var latitude: Double
@@ -30,7 +25,7 @@ struct Course {
     }
 }
 
-// 2. //
+// >>>>> CLASSES <<<<< //
 
 class Person {
     var name: String?
@@ -89,9 +84,8 @@ class Person {
     }
 }
 
-// Part 2 //
+// >>>>>> SUB CLASSES  <<<<< //
 
-// 1. //
 
 class Student: Person {
     var attendingCourses: [Course]?
@@ -143,6 +137,8 @@ class Student: Person {
     }
 }
 
+//  >>>>> NEW INSTANCES <<<< //
+
 
 let mirko = Person(
     name: "Mirko",
@@ -167,7 +163,7 @@ let testTeacher = Person(
     location: nil
 )
 testTeacher.introduction()
-// 3. //
+//  >>>>  NEW INSTANCES   <<<< //
 
 let IOSDevelopment = Course(teacher: mirko, courseName: "IOS development")
 IOSDevelopment.aboutCourse()
@@ -188,7 +184,6 @@ let student = Student(
 )
 
 student.introduction()
-
 
 let courses2 = [Course]()
 let myGrades2 = [Int]()
