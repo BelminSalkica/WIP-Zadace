@@ -22,7 +22,7 @@ struct Course {
     let courseName: String
     
     func aboutCourse () -> String {
-        return "\(courseName) course by prof. \(teacher.lastName!)"
+        return "\(courseName) course by prof. \(teacher.lastName)"
     }
 }
 
@@ -46,29 +46,16 @@ class Person {
         }
     }
     
-    init (name: String?, lastName: String?, yearOfBirth: Int?, location: Location?) {
+    init (name: String?, lastName: String?, yearOfBirth: Int?, location: Location) {
         
-        self.name = "[ Name not found ]"
-        self.lastName = "[ Last name not found ]"
-        self.yearOfBirth = 1990
-        self.location = Location()
-        
-        if let name = name {
-            self.name = name
-        }
-        if let lastName = lastName {
-            self.lastName = lastName
-        }
-        if let yearOfBirth = yearOfBirth {
-            self.yearOfBirth = yearOfBirth
-        }
-        if let location = location {
-            self.location = location
-        }
+        self.name = name
+        self.lastName = lastName
+        self.yearOfBirth = yearOfBirth
+        self.location = location
     }
     
     convenience init () {
-        self.init (
+        self.init(
             name: "[ Name not found ]",
             lastName: "[ Last name not found ]",
             yearOfBirth: 1990,
@@ -116,41 +103,34 @@ class Student: Person {
     }
     
     init (
-        name: String?, lastName: String?, yearOfBirth: Int?, location: Location?, grades: [Int]?, attendingCourses: [Course]?) {
+        name: String?, lastName: String?, yearOfBirth: Int?, location: Location, grades: [Int]?, attendingCourses: [Course]?) {
         
-        self.attendingCourses = nil
-        self.grades = nil
-        
-        if let attendingCourses = attendingCourses {
-            self.attendingCourses = attendingCourses
-        }
-        if let grades = grades {
-            self.grades = grades
-        }
+        self.attendingCourses = attendingCourses
+        self.grades = grades
         
         super.init(name: name, lastName: lastName, yearOfBirth: yearOfBirth, location: location)
     }
     
     override func introduction() -> String {
-        let fatherSavings = father?.savings
-        let motherSavings = mother?.savings
         
-        var intString = ""
-        intString += super.introduction() + " I'm student at \(faculty). "
+        var intString = super.introduction() + " I'm student at \(faculty). "
         
         if attendingCourses!.isEmpty {
             intString += "[There is no courses you are attending ]"
         } else {
-            intString += "My favourite course is " + attendingCourses!.first!.aboutCourse() + " and my average is \(averageGrade!) "
-        }
-        if fatherSavings == nil && motherSavings == nil {
-            intString += "My parents are broke"
+            intString += "My favourite course is" + " " + attendingCourses!.first!.aboutCourse() + " " + "and my average is \(averageGrade!) "
         }
         
-        if fatherSavings != nil {
-            intString += "My father savings is \(fatherSavings)"
-        } else if motherSavings != nil {
-            intString += "My mother savings is \(motherSavings)"
+        guard(father?.savings != nil || mother?.savings != nil) else {
+            intString += "My parents are broke"
+            return intString
+        }
+        
+        if let fatherSavings = father?.savings {
+            intString += "My father have \(fatherSavings) savings"
+        }
+        if let motherSavings = mother?.savings {
+            intString += "My mother have \(motherSavings) savings"
         }
         return intString
     }
@@ -159,31 +139,18 @@ class Student: Person {
 // Parent sub class //
 
 class Parent: Person {
-    var children:[Person]?
+    var children:[Person]
     var savings: Double?
     
-    init (name: String?, lastName: String?, yearOfBirth: Int?, location: Location?, children: [Person]?, savings: Double?) {
+    init (name: String?, lastName: String?, yearOfBirth: Int?, location: Location, children: [Person], savings: Double?) {
         
-        self.children = nil
-        self.savings = nil
+        self.children = children
+        self.savings = savings
         
-        if let children = children {
-            self.children = children
-        }
-        if let savings = savings{
-            self.savings = savings
-        }
         super.init(name: name, lastName: lastName, yearOfBirth: yearOfBirth, location: location)
     }
     override func introduction() -> String {
-        
-        var intro = ""
-        
-        if children!.isEmpty {
-            intro += super.introduction() + "[There is no children]"
-        } else {
-            intro = super.introduction() + " I'm parent of: \(children!.count) children"
-        }
+        let intro = super.introduction() + "I'm parent of \(children.count) children "
         return intro
     }
 }
@@ -215,13 +182,7 @@ let nedim = Person(
 )
 nedim.introduction()
 
-let testTeacher = Person(
-    name: nil,
-    lastName: nil,
-    yearOfBirth: 2017,
-    location: nil
-)
-testTeacher.introduction()
+
 //  >>>>  NEW INSTANCES   <<<< //
 
 let IOSDevelopment = Course (
@@ -279,8 +240,8 @@ motherBelmin = Parent(
     savings: randomSavings
 )
 
-student!.father = fatherBelmin
-student!.mother = motherBelmin
+if let student = student { student.father = fatherBelmin }
+if let student = student { student.mother = motherBelmin }
 
 fatherBelmin?.introduction()
 motherBelmin?.introduction()
@@ -288,32 +249,13 @@ student?.introduction()
 
 student?.father?.introduction()
 student?.mother?.introduction()
-student!.introduction()
+student?.introduction()
 // Extension ageInDays
 var someInt = 10
 someInt.ageInDays()
 
-let studentAgeInDays = student!.age.ageInDays()
+let studentAgeInDays = student?.age.ageInDays()
 let fatherAgeInDays = student?.father?.age.ageInDays()
 let motherAgeInDays = student?.mother?.age.ageInDays()
 
-
-// Testing
-let courses2 = [Course]()
-let myGrades2 = [Int]()
-
-let student2 = Student (
-    name: nil,
-    lastName:  nil,
-    yearOfBirth: 2019,
-    location: Location(),
-    grades: myGrades2,
-    attendingCourses: courses2
-)
-
-student2.introduction()
-
-
-
-
-
+// End of my five homework
