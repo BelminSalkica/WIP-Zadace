@@ -4,7 +4,7 @@ import Foundation
 // Protocols
 
 protocol DrivingLicence {
-    var someSet: Set<DrivingLicenceType> { get set }
+    var drivingLicence: Set<DrivingLicenceType> { get set }
 }
 protocol CarMonitoringDelegate {
     func engineBroke()
@@ -15,15 +15,12 @@ protocol CarMonitoringDelegate {
 // Enums
 
 enum DrivingLicenceType {
-    case A
-    case B
-    case C
-    case D
+    case A, B, C, D
 }
 // Functions
 
 func deleyPrint(printaj: String) {
-    sleep(2)
+    sleep(1)
     print(printaj)
 }
 
@@ -85,7 +82,7 @@ class Car {
                 delegate?.engineBroke()
                 stop()
             }
-            if fuelLevel == 10 {
+            if fuelLevel <= 10 {
                 deleyPrint("Fuel low")
                 delegate?.lowOnFuel()
             }
@@ -96,14 +93,14 @@ class Car {
             }
             fuelLevel -= 1
             crossedKilometers += 10
-            if Int(arc4random() % 100) == 100 {
+            if Int(arc4random() % 100) + 1  == 100 {
                 broken = true
             }
         } while engingOn == true 
     }
     func addSomeFuel() {
         deleyPrint("Adding some fuel...")
-        let randomFuel = Int(arc4random()) % (fuelTank - fuelLevel)
+        let randomFuel = Int(arc4random()) % (fuelTank)
         fuelLevel += randomFuel
         deleyPrint("Added fuel. Current fuel level: \(fuelLevel)")
     }
@@ -113,13 +110,13 @@ class Car {
 // Sub Classes
 
 class Driver: Person, DrivingLicence {
-    var someSet: Set<DrivingLicenceType>
+    var drivingLicence: Set<DrivingLicenceType>
     var mechanic: Mechanic?
     
     var car: Car?
     
-    init(someSet: Set<DrivingLicenceType>, firstName: String, lastName: String, age: Int) {
-        self.someSet = someSet
+    init(firstName: String, lastName: String, age: Int, drivingLicence: Set<DrivingLicenceType>) {
+        self.drivingLicence = drivingLicence
         super.init(firstName: firstName, lastName: lastName, age: age)
     }
     
@@ -132,7 +129,11 @@ class Driver: Person, DrivingLicence {
         }
     }
     func driveCar () {
-        car?.drive()
+        if  drivingLicence.isEmpty == false {
+            car?.drive()
+        } else {
+            deleyPrint("Driver doesn't have appropriate licence type")
+        }
     }
 }
 
@@ -154,16 +155,19 @@ class Mechanic: Person {
 extension Driver: CarMonitoringDelegate {
     func engineBroke() {
         deleyPrint("Calling mechanic...")
-        callMechanic(mechanic!, toFixCar: car!)
+        if let mechanic = mechanic, car = car { callMechanic(mechanic, toFixCar: car) }
+//        callMechanic(mechanic!, toFixCar: car!)
     }
     func lowOnFuel() {
-        let random = Int(arc4random()) % 100
-        if random > 33 {
+        let random = Int(arc4random()) % 3
+        
+        switch random {
+        case 0:
             deleyPrint("I will add some gass now")
-            car?.addSomeFuel()
-            
-        } else {
-            deleyPrint("I wll add some gass later")
+        case 1, 2:
+            deleyPrint("I willd add some gass later")
+        default:
+            break
         }
     }
     func outOfFuel() {
@@ -173,9 +177,25 @@ extension Driver: CarMonitoringDelegate {
 }
 
 
-let driverBelmin = Driver(someSet: [DrivingLicenceType.A], firstName: "Belmin", lastName: "Salkica", age: 21)
-let carBelmin = Car(name: "Golf 2", model: "Limuzina", licenceType: DrivingLicenceType.B, fuelTank: 20, fuelLevel: 30)
-let mechanicKeno = Mechanic(authorizedServiceForLicenceTypes: [DrivingLicenceType.B], firstName: "Kenan", lastName: "Last namE", age: 21)
+let driverBelmin = Driver(
+    firstName: "Belmin",
+    lastName: "Salkica",
+    age: 21,
+    drivingLicence: [DrivingLicenceType.A]
+)
+let carBelmin = Car(
+    name: "Golf 2",
+    model: "Limuzina",
+    licenceType: DrivingLicenceType.B,
+    fuelTank: 40,
+    fuelLevel: 50
+)
+let mechanicKeno = Mechanic(
+    authorizedServiceForLicenceTypes: [DrivingLicenceType.B],
+    firstName: "Kenan",
+    lastName: "Last namE",
+    age: 21
+)
 
 driverBelmin.car = carBelmin
 carBelmin.delegate = driverBelmin
