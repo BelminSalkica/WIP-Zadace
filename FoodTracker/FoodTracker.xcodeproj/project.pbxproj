@@ -16,6 +16,7 @@
 		DE6967EA1D6F20CF00862E90 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6967E91D6F20CF00862E90 /* RatingControl.swift */; };
 		DE6967EC1D6F397800862E90 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6967EB1D6F397800862E90 /* Meal.swift */; };
 		DE6967ED1D6F397800862E90 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6967EB1D6F397800862E90 /* Meal.swift */; };
+		DE6967EF1D6F431900862E90 /* VKCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6967EE1D6F431900862E90 /* VKCheckbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		DE6967DC1D6EF7BF00862E90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE6967E91D6F20CF00862E90 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		DE6967EB1D6F397800862E90 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		DE6967EE1D6F431900862E90 /* VKCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKCheckbox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				DE6967D11D6EF7BF00862E90 /* Info.plist */,
 				DE6967E91D6F20CF00862E90 /* RatingControl.swift */,
 				DE6967EB1D6F397800862E90 /* Meal.swift */,
+				DE6967EE1D6F431900862E90 /* VKCheckbox.swift */,
 			);
 			path = FoodTracker;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE6967EC1D6F397800862E90 /* Meal.swift in Sources */,
+				DE6967EF1D6F431900862E90 /* VKCheckbox.swift in Sources */,
 				DE6967C81D6EF7BF00862E90 /* ViewController.swift in Sources */,
 				DE6967EA1D6F20CF00862E90 /* RatingControl.swift in Sources */,
 				DE6967C61D6EF7BF00862E90 /* AppDelegate.swift in Sources */,
@@ -400,6 +404,7 @@
 				DE6967E11D6EF7BF00862E90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE6967E21D6EF7BF00862E90 /* Build configuration list for PBXNativeTarget "FoodTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +413,7 @@
 				DE6967E41D6EF7BF00862E90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

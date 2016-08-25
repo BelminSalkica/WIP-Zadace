@@ -14,10 +14,17 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var checkbox: VKCheckbox!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Simple checkbox callback
+        checkbox.checkboxValueChangedBlock = {
+            isOn in
+        }
+        
         // Handle user inputs
         nameTextField.delegate = self
     }
