@@ -23,8 +23,6 @@ class MealTableViewController: UITableViewController {
             // Load sample data
             loadSampleMeals()
         }
-        // Load sample data
-        loadSampleMeals()
     }
     func loadSampleMeals() {
         let photo1 = UIImage(named: "meal1")!

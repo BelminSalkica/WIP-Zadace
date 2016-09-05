@@ -16,6 +16,7 @@ class Meal: NSObject, NSCoding {
     var rating: Int
     
     // MARK: Archiving Paths
+    
     static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("meals")
     
