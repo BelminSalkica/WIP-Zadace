@@ -125,7 +125,7 @@ class MealTableViewController: UITableViewController {
         
     }
     
-    // MARK: NSCoding 
+    // MARK: NSCoding
     func saveMeals() {
         let isSucessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchiveURL.path!)
         if !isSucessfulSave {
