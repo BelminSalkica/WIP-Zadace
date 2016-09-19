@@ -18,7 +18,7 @@ class Spending: NSObject, NSCoding {
     // Assuming that currency is in $$$
     let currency = "$"
     
-    // MARK: Archiving Paths 
+    // MARK: Archiving Paths
     static let documentDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
     static let archiveUrl = documentDirectory.URLByAppendingPathComponent("spending")
     
@@ -37,7 +37,7 @@ class Spending: NSObject, NSCoding {
         super.init()
     }
     
-    // MARK: Types 
+    // MARK: Types
     struct PropertyKey {
         static let spentKey = "name"
         static let descriptionKey = "description"

@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+        
         // Enable save button if amount text field is valid
         checkValidAmountName()
         
@@ -76,7 +76,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         // Done button
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ViewController.doneButtonAction))
-    
+        
         var items = [UIBarButtonItem]()
         // Spacing
         items.append(flexSpace)
@@ -110,11 +110,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
-            let amountSpent = Double(amountTextField.text ?? "0.00")
+            let amountSpent = Double(amountTextField.text ?? "0.00")!
             let description = descriptionTextView.text ?? ""
             let date = dateTextField.text ?? ""
             
-            spent = Spending(amountSpent: amountSpent!, descriptionOfSpending: description, dateOfSpending: date)
+            spent = Spending(amountSpent: amountSpent, descriptionOfSpending: description, dateOfSpending: date)
         }
     }
     
@@ -125,6 +125,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         sender.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(ViewController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)
     }
+
     func prepareLayout() {
         let fieldBorderWidth: CGFloat = 1.0
         let fieldCornerRadius: CGFloat = 3.0
@@ -149,7 +150,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         let strDate = dateFormatter.stringFromDate(currentDate)
         dateTextField.text = strDate
     }
-   
+    
     
 }
 

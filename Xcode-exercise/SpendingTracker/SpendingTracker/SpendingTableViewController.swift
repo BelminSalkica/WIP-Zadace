@@ -46,7 +46,7 @@ class SpendingTableViewController: UITableViewController {
         if let savedSpendings = loadSpendings() {
             expenses += savedSpendings
         } else {
-        loadSampleData()
+            loadSampleData()
         }
     }
     
@@ -58,12 +58,10 @@ class SpendingTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return expenses.count
     }
     
@@ -79,6 +77,7 @@ class SpendingTableViewController: UITableViewController {
         // Configure the cell..
         cell.moneyLabel.text = theExpenses.currency + String(theExpenses.amountSpent)
         cell.dateLabel.text = theExpenses.dateOfSpending
+        cell.descriptionLabel.text = theExpenses.descriptionOfSpending
         return cell
     }
     
@@ -119,10 +118,10 @@ class SpendingTableViewController: UITableViewController {
             let  spendingDetailViewControler = segue.destinationViewController as! ViewController
             
             if let selectedSpendingCell = sender as? SpendingTableViewCell {
-                let indexPath = tableView.indexPathForCell(selectedSpendingCell)!
-                let selectedSpending = expenses[indexPath.row]
-                spendingDetailViewControler.spent = selectedSpending
-                
+                if let indexPath = tableView.indexPathForCell(selectedSpendingCell) {
+                    let selectedSpending = expenses[indexPath.row]
+                    spendingDetailViewControler.spent = selectedSpending
+                }
             }
         }
         if segue.identifier == "AddItem" {
@@ -131,7 +130,7 @@ class SpendingTableViewController: UITableViewController {
         }
     }
     // Override to support rearranging the table view.
-        override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
     }
     
     // MARK: NSCoding
