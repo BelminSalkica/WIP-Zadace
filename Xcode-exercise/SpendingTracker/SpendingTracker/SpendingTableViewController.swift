@@ -78,6 +78,7 @@ class SpendingTableViewController: UITableViewController {
         cell.moneyLabel.text = theExpenses.currency + String(theExpenses.amountSpent)
         cell.dateLabel.text = theExpenses.dateOfSpending
         cell.descriptionLabel.text = theExpenses.descriptionOfSpending
+        
         return cell
     }
     
@@ -86,12 +87,12 @@ class SpendingTableViewController: UITableViewController {
         if let sourceViewController = sender.sourceViewController as? ViewController, expense = sourceViewController.spent {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 
-                // Update an existing meal
+                // Update an existing item
                 expenses[selectedIndexPath.row] = expense
                 tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
             }
             else {
-                // Add new meal
+                // Add new item
                 let newIndexPath = NSIndexPath(forRow: expenses.count, inSection: 0)
                 expenses.append(expense)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)

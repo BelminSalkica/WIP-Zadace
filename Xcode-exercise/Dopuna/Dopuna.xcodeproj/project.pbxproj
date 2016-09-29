@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE41ADEA1D91313100B4310E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE41ADE91D91313100B4310E /* AppDelegate.swift */; };
+		DE41ADEC1D91313100B4310E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE41ADEB1D91313100B4310E /* MainViewController.swift */; };
+		DE41ADEF1D91313100B4310E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE41ADED1D91313100B4310E /* Main.storyboard */; };
+		DE41ADF11D91313100B4310E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE41ADF01D91313100B4310E /* Assets.xcassets */; };
+		DE41ADF41D91313100B4310E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE41ADF21D91313100B4310E /* LaunchScreen.storyboard */; };
+		DE41ADFF1D91313100B4310E /* DopunaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE41ADFE1D91313100B4310E /* DopunaTests.swift */; };
+		DE6A8E8E1D91F0A20066EE2F /* NoviKontaktViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A8E8D1D91F0A20066EE2F /* NoviKontaktViewController.swift */; };
+		DE9EC3371D915D8A008F615B /* KontaktTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9EC3361D915D8A008F615B /* KontaktTableViewCell.swift */; };
+		DE9EC33D1D915FC7008F615B /* KontaktTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9EC33C1D915FC7008F615B /* KontaktTableViewController.swift */; };
+		DE9EC33F1D915FEB008F615B /* Kontakt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9EC33E1D915FEB008F615B /* Kontakt.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE41ADFB1D91313100B4310E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE41ADDE1D91313000B4310E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE41ADE51D91313000B4310E;
+			remoteInfo = Dopuna;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE41ADE61D91313100B4310E /* Dopuna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dopuna.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE41ADE91D91313100B4310E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE41ADEB1D91313100B4310E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DE41ADEE1D91313100B4310E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE41ADF01D91313100B4310E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE41ADF31D91313100B4310E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE41ADF51D91313100B4310E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE41ADFA1D91313100B4310E /* DopunaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopunaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE41ADFE1D91313100B4310E /* DopunaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopunaTests.swift; sourceTree = "<group>"; };
+		DE41AE001D91313100B4310E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE6A8E8D1D91F0A20066EE2F /* NoviKontaktViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoviKontaktViewController.swift; sourceTree = "<group>"; };
+		DE9EC3361D915D8A008F615B /* KontaktTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontaktTableViewCell.swift; sourceTree = "<group>"; };
+		DE9EC33C1D915FC7008F615B /* KontaktTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontaktTableViewController.swift; sourceTree = "<group>"; };
+		DE9EC33E1D915FEB008F615B /* Kontakt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kontakt.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE41ADE31D91313000B4310E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE41ADF71D91313100B4310E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE41ADDD1D91313000B4310E = {
+			isa = PBXGroup;
+			children = (
+				DE41ADE81D91313100B4310E /* Dopuna */,
+				DE41ADFD1D91313100B4310E /* DopunaTests */,
+				DE41ADE71D91313100B4310E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE41ADE71D91313100B4310E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE41ADE61D91313100B4310E /* Dopuna.app */,
+				DE41ADFA1D91313100B4310E /* DopunaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE41ADE81D91313100B4310E /* Dopuna */ = {
+			isa = PBXGroup;
+			children = (
+				DE6A8E901D91F2AD0066EE2F /* Models */,
+				DE6A8E921D91F3C10066EE2F /* View */,
+				DE6A8E8F1D91F2670066EE2F /* Controllers */,
+				DE6A8E911D91F2BB0066EE2F /* AppDelegate */,
+				DE41ADF01D91313100B4310E /* Assets.xcassets */,
+				DE41ADF21D91313100B4310E /* LaunchScreen.storyboard */,
+				DE41ADF51D91313100B4310E /* Info.plist */,
+			);
+			path = Dopuna;
+			sourceTree = "<group>";
+		};
+		DE41ADFD1D91313100B4310E /* DopunaTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE41ADFE1D91313100B4310E /* DopunaTests.swift */,
+				DE41AE001D91313100B4310E /* Info.plist */,
+			);
+			path = DopunaTests;
+			sourceTree = "<group>";
+		};
+		DE6A8E8F1D91F2670066EE2F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE41ADEB1D91313100B4310E /* MainViewController.swift */,
+				DE9EC33C1D915FC7008F615B /* KontaktTableViewController.swift */,
+				DE9EC3361D915D8A008F615B /* KontaktTableViewCell.swift */,
+				DE6A8E8D1D91F0A20066EE2F /* NoviKontaktViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DE6A8E901D91F2AD0066EE2F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE9EC33E1D915FEB008F615B /* Kontakt.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DE6A8E911D91F2BB0066EE2F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DE41ADE91D91313100B4310E /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DE6A8E921D91F3C10066EE2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE41ADED1D91313100B4310E /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE41ADE51D91313000B4310E /* Dopuna */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE41AE031D91313100B4310E /* Build configuration list for PBXNativeTarget "Dopuna" */;
+			buildPhases = (
+				DE41ADE21D91313000B4310E /* Sources */,
+				DE41ADE31D91313000B4310E /* Frameworks */,
+				DE41ADE41D91313000B4310E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dopuna;
+			productName = Dopuna;
+			productReference = DE41ADE61D91313100B4310E /* Dopuna.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE41ADF91D91313100B4310E /* DopunaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE41AE061D91313100B4310E /* Build configuration list for PBXNativeTarget "DopunaTests" */;
+			buildPhases = (
+				DE41ADF61D91313100B4310E /* Sources */,
+				DE41ADF71D91313100B4310E /* Frameworks */,
+				DE41ADF81D91313100B4310E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE41ADFC1D91313100B4310E /* PBXTargetDependency */,
+			);
+			name = DopunaTests;
+			productName = DopunaTests;
+			productReference = DE41ADFA1D91313100B4310E /* DopunaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE41ADDE1D91313000B4310E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = WIP;
+				TargetAttributes = {
+					DE41ADE51D91313000B4310E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					DE41ADF91D91313100B4310E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DE41ADE51D91313000B4310E;
+					};
+				};
+			};
+			buildConfigurationList = DE41ADE11D91313000B4310E /* Build configuration list for PBXProject "Dopuna" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE41ADDD1D91313000B4310E;
+			productRefGroup = DE41ADE71D91313100B4310E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE41ADE51D91313000B4310E /* Dopuna */,
+				DE41ADF91D91313100B4310E /* DopunaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE41ADE41D91313000B4310E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE41ADF41D91313100B4310E /* LaunchScreen.storyboard in Resources */,
+				DE41ADF11D91313100B4310E /* Assets.xcassets in Resources */,
+				DE41ADEF1D91313100B4310E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE41ADF81D91313100B4310E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE41ADE21D91313000B4310E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9EC33D1D915FC7008F615B /* KontaktTableViewController.swift in Sources */,
+				DE6A8E8E1D91F0A20066EE2F /* NoviKontaktViewController.swift in Sources */,
+				DE41ADEC1D91313100B4310E /* MainViewController.swift in Sources */,
+				DE9EC3371D915D8A008F615B /* KontaktTableViewCell.swift in Sources */,
+				DE41ADEA1D91313100B4310E /* AppDelegate.swift in Sources */,
+				DE9EC33F1D915FEB008F615B /* Kontakt.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE41ADF61D91313100B4310E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE41ADFF1D91313100B4310E /* DopunaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE41ADFC1D91313100B4310E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE41ADE51D91313000B4310E /* Dopuna */;
+			targetProxy = DE41ADFB1D91313100B4310E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE41ADED1D91313100B4310E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE41ADEE1D91313100B4310E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE41ADF21D91313100B4310E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE41ADF31D91313100B4310E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE41AE011D91313100B4310E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE41AE021D91313100B4310E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE41AE041D91313100B4310E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Dopuna/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.belminsalkica.Dopuna;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DE41AE051D91313100B4310E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Dopuna/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.belminsalkica.Dopuna;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DE41AE071D91313100B4310E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DopunaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.belminsalkica.DopunaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dopuna.app/Dopuna";
+			};
+			name = Debug;
+		};
+		DE41AE081D91313100B4310E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DopunaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.belminsalkica.DopunaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dopuna.app/Dopuna";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE41ADE11D91313000B4310E /* Build configuration list for PBXProject "Dopuna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE41AE011D91313100B4310E /* Debug */,
+				DE41AE021D91313100B4310E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE41AE031D91313100B4310E /* Build configuration list for PBXNativeTarget "Dopuna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE41AE041D91313100B4310E /* Debug */,
+				DE41AE051D91313100B4310E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE41AE061D91313100B4310E /* Build configuration list for PBXNativeTarget "DopunaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE41AE071D91313100B4310E /* Debug */,
+				DE41AE081D91313100B4310E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE41ADDE1D91313000B4310E /* Project object */;
+}
