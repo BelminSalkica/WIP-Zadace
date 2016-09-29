@@ -20,6 +20,7 @@ class KontaktTableViewController: UITableViewController {
     // MARK: Properties
     var kontakti = [Kontakt]()
     var selectedContactRow: Int?
+    var myColor = Kontakt.myColor
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +71,9 @@ class KontaktTableViewController: UITableViewController {
         
         // Fetches the appropriate meal for the data source layout.
         let kontakt = kontakti[indexPath.row]
+        
+        // Cell text color
+        cell.textLabel?.textColor = myColor
         
         // Configure cell
         if kontakt.name?.isEmpty == true {

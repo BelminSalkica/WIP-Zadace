@@ -13,6 +13,7 @@ class NoviKontaktViewController: UIViewController, UINavigationControllerDelegat
     // MARK: Properties
     @IBOutlet weak var imeTextField: UITextField!
     @IBOutlet weak var brojTextField: UITextField!
+    @IBOutlet weak var triOsamSedam: UILabel!
     
     // Buttons
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
@@ -38,7 +39,15 @@ class NoviKontaktViewController: UIViewController, UINavigationControllerDelegat
             brojTextField.text = contact.phoneNumber
         }
         
+        // Button layout
         buttonLayout(saveButton, color: myColor, radius: 5, borderWidth: 1)
+        
+        // TextFieldLayout 
+        textFieldLayout(imeTextField, color: myColor, borderWidth: 1, cornenrRadius: 8)
+        textFieldLayout(brojTextField, color: myColor, borderWidth: 1, cornenrRadius: 8)
+        
+        // Text color 
+        triOsamSedam.textColor = myColor
     }
     // MARK: UITextFieldDelegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -93,6 +102,12 @@ class NoviKontaktViewController: UIViewController, UINavigationControllerDelegat
         
         button.layer.borderColor = color.CGColor
         button.tintColor = color
+        
+    }
+    func textFieldLayout (textField: UITextField, color: UIColor, borderWidth: CGFloat, cornenrRadius: CGFloat) {
+        textField.layer.borderColor = myColor.CGColor
+        textField.layer.borderWidth = borderWidth
+        textField.layer.cornerRadius = cornenrRadius
     }
     // MARK: Actions
     @IBAction func cancle(sender: UIBarButtonItem) {

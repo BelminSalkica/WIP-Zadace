@@ -129,10 +129,6 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, Cont
         segmentedControlLayout(kolicinaDopuneMtel, color: myColor, radius: 5, borderWidth: 1)
         segmentedControlLayout(kolicinaDopuneBht, color: myColor, radius: 5, borderWidth: 1)
     }
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        // LightContent
-        return UIStatusBarStyle.LightContent
-    }
     // Selected contact
     func selectedContact(contact: Kontakt) {
         selectedKontakt = contact

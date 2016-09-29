@@ -19,7 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-DE-4lo">
-                                <rect key="frame" x="20" y="208" width="560" height="29"/>
+                                <rect key="frame" x="20" y="165" width="560" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="lXI-wg-Vig"/>
+                                </constraints>
                                 <segments>
                                     <segment title="m:tel"/>
                                     <segment title="BH T"/>
@@ -29,7 +32,7 @@
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="u2r-Q8-5Ao">
-                                <rect key="frame" x="20" y="268" width="560" height="29"/>
+                                <rect key="frame" x="20" y="225" width="560" height="29"/>
                                 <segments>
                                     <segment title="2 KM"/>
                                     <segment title="3 KM"/>
@@ -42,14 +45,17 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPH-FB-k15">
-                                <rect key="frame" x="20" y="320" width="560" height="30"/>
+                                <rect key="frame" x="20" y="277" width="560" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="ffz-GO-iDH"/>
+                                </constraints>
                                 <state key="normal" title="DOPUNI RAČUN"/>
                                 <connections>
                                     <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVh-r9-T3v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhH-C5-KuG">
-                                <rect key="frame" x="20" y="156" width="560" height="30"/>
+                                <rect key="frame" x="20" y="95" width="560" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jps-O5-zQX"/>
                                 </constraints>
@@ -64,7 +70,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sZX-7u-CFP">
-                                <rect key="frame" x="20" y="268" width="560" height="29"/>
+                                <rect key="frame" x="20" y="225" width="560" height="29"/>
                                 <segments>
                                     <segment title="1 KM"/>
                                     <segment title="2 KM"/>
@@ -89,21 +95,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mhH-C5-KuG" firstAttribute="leading" secondItem="hcb-DE-4lo" secondAttribute="leading" id="4aJ-P5-iqr"/>
-                            <constraint firstItem="hcb-DE-4lo" firstAttribute="top" secondItem="mhH-C5-KuG" secondAttribute="bottom" constant="22" id="5Vq-hC-Ecm"/>
-                            <constraint firstItem="mhH-C5-KuG" firstAttribute="trailing" secondItem="sZX-7u-CFP" secondAttribute="trailing" id="5b4-4k-tL1"/>
-                            <constraint firstItem="mhH-C5-KuG" firstAttribute="trailing" secondItem="hcb-DE-4lo" secondAttribute="trailing" id="9xE-PQ-rQ9"/>
-                            <constraint firstItem="mhH-C5-KuG" firstAttribute="leading" secondItem="u2r-Q8-5Ao" secondAttribute="leading" id="CbX-Xz-zKH"/>
-                            <constraint firstItem="mhH-C5-KuG" firstAttribute="leading" secondItem="sZX-7u-CFP" secondAttribute="leading" id="E5Q-pJ-toX"/>
-                            <constraint firstItem="mhH-C5-KuG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Jvd-qi-a56"/>
-                            <constraint firstItem="mhH-C5-KuG" firstAttribute="trailing" secondItem="u2r-Q8-5Ao" secondAttribute="trailing" id="OXv-xg-AX1"/>
-                            <constraint firstItem="mhH-C5-KuG" firstAttribute="trailing" secondItem="ZPH-FB-k15" secondAttribute="trailing" id="XgT-5i-OVO"/>
-                            <constraint firstItem="mhH-C5-KuG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mTz-jd-RV0"/>
-                            <constraint firstItem="ZPH-FB-k15" firstAttribute="top" secondItem="u2r-Q8-5Ao" secondAttribute="bottom" constant="24" id="mdA-rx-kCg"/>
-                            <constraint firstItem="mhH-C5-KuG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="nKq-f0-qhd"/>
-                            <constraint firstItem="u2r-Q8-5Ao" firstAttribute="baseline" secondItem="sZX-7u-CFP" secondAttribute="baseline" id="oE0-Vo-nAN"/>
-                            <constraint firstItem="mhH-C5-KuG" firstAttribute="leading" secondItem="ZPH-FB-k15" secondAttribute="leading" id="oGO-l9-pPn"/>
-                            <constraint firstItem="u2r-Q8-5Ao" firstAttribute="top" secondItem="hcb-DE-4lo" secondAttribute="bottom" constant="32" id="uBb-Lz-hoy"/>
+                            <constraint firstItem="u2r-Q8-5Ao" firstAttribute="trailing" secondItem="ZPH-FB-k15" secondAttribute="trailing" id="1Nz-Uk-BXB"/>
+                            <constraint firstItem="mhH-C5-KuG" firstAttribute="height" secondItem="ZPH-FB-k15" secondAttribute="height" id="3H1-Sp-iIM"/>
+                            <constraint firstItem="sZX-7u-CFP" firstAttribute="trailing" secondItem="u2r-Q8-5Ao" secondAttribute="trailing" id="41i-Hm-mtp"/>
+                            <constraint firstItem="hcb-DE-4lo" firstAttribute="trailing" secondItem="u2r-Q8-5Ao" secondAttribute="trailing" id="CmO-dj-vnS"/>
+                            <constraint firstItem="mhH-C5-KuG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DyI-3z-wRA"/>
+                            <constraint firstItem="sZX-7u-CFP" firstAttribute="top" secondItem="hcb-DE-4lo" secondAttribute="bottom" constant="32" id="GdK-ch-Is7"/>
+                            <constraint firstItem="sZX-7u-CFP" firstAttribute="leading" secondItem="u2r-Q8-5Ao" secondAttribute="leading" id="Ttd-vE-Qcu"/>
+                            <constraint firstItem="hcb-DE-4lo" firstAttribute="leading" secondItem="sZX-7u-CFP" secondAttribute="leading" id="Urm-qM-eIf"/>
+                            <constraint firstItem="mhH-C5-KuG" firstAttribute="trailing" secondItem="hcb-DE-4lo" secondAttribute="trailing" id="XOC-8r-aN9"/>
+                            <constraint firstItem="mhH-C5-KuG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="ZFT-fm-vsO"/>
+                            <constraint firstItem="u2r-Q8-5Ao" firstAttribute="baseline" secondItem="sZX-7u-CFP" secondAttribute="baseline" id="bJe-Mp-jNU"/>
+                            <constraint firstItem="u2r-Q8-5Ao" firstAttribute="leading" secondItem="ZPH-FB-k15" secondAttribute="leading" id="dhk-1b-8El"/>
+                            <constraint firstItem="ZPH-FB-k15" firstAttribute="top" secondItem="sZX-7u-CFP" secondAttribute="bottom" constant="24" id="hiV-KH-PMU"/>
+                            <constraint firstItem="mhH-C5-KuG" firstAttribute="leading" secondItem="hcb-DE-4lo" secondAttribute="leading" id="iKx-xG-Hxm"/>
+                            <constraint firstItem="mhH-C5-KuG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ltJ-Z9-Ifr"/>
+                            <constraint firstItem="u2r-Q8-5Ao" firstAttribute="bottom" secondItem="sZX-7u-CFP" secondAttribute="bottom" id="o4d-JK-lXi"/>
+                            <constraint firstItem="hcb-DE-4lo" firstAttribute="top" secondItem="mhH-C5-KuG" secondAttribute="bottom" constant="27" id="osd-7u-E0c"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -144,7 +152,7 @@
                                             <rect key="frame" x="15" y="28" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.17458152394758439" green="0.65246394230769234" blue="0.21736163650458179" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zlF-hl-WkW">
@@ -192,7 +200,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HW5-EN-fvo">
-                                <rect key="frame" x="20" y="254" width="560" height="30"/>
+                                <rect key="frame" x="20" y="239" width="566" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="xfT-rS-ePb"/>
+                                </constraints>
                                 <state key="normal" title="Dodaj novi kontakt"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="Iiw-r1-FlU" eventType="touchUpInside" id="nUl-Ta-DJv"/>
@@ -209,7 +220,7 @@
                                     <constraint firstAttribute="width" constant="42" id="XnC-Am-ckG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.1612154682035036" green="0.8716346153846154" blue="0.071597274699513727" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ime kontakta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2w-tz-FMS">
@@ -234,15 +245,15 @@
                         <constraints>
                             <constraint firstItem="qVD-4v-9Zm" firstAttribute="leading" secondItem="i2w-tz-FMS" secondAttribute="leading" id="11H-kt-krW"/>
                             <constraint firstItem="qVD-4v-9Zm" firstAttribute="top" secondItem="i2w-tz-FMS" secondAttribute="bottom" constant="8" symbolic="YES" id="2U4-md-rPl"/>
+                            <constraint firstItem="HW5-EN-fvo" firstAttribute="leading" secondItem="qVD-4v-9Zm" secondAttribute="leading" id="3MC-PX-nHR"/>
                             <constraint firstItem="rye-fG-Q5W" firstAttribute="top" secondItem="yBg-iy-XWM" secondAttribute="bottom" constant="8" symbolic="YES" id="8yN-1w-miX"/>
                             <constraint firstItem="rye-fG-Q5W" firstAttribute="centerY" secondItem="ZjX-1x-ivY" secondAttribute="centerY" id="HIQ-iX-9lx"/>
-                            <constraint firstItem="HW5-EN-fvo" firstAttribute="top" secondItem="rye-fG-Q5W" secondAttribute="bottom" constant="47" id="RM9-yB-gmt"/>
+                            <constraint firstItem="HW5-EN-fvo" firstAttribute="top" secondItem="ZjX-1x-ivY" secondAttribute="bottom" constant="27" id="Mw1-qi-TCo"/>
                             <constraint firstItem="ZjX-1x-ivY" firstAttribute="leading" secondItem="rye-fG-Q5W" secondAttribute="trailing" constant="8" id="U4e-Dy-Nmk"/>
                             <constraint firstItem="rye-fG-Q5W" firstAttribute="leading" secondItem="uwf-0o-jmX" secondAttribute="leadingMargin" constant="-2" id="Xc1-mI-zfO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HW5-EN-fvo" secondAttribute="trailing" constant="-6" id="doL-3G-lTa"/>
                             <constraint firstAttribute="trailing" secondItem="ZjX-1x-ivY" secondAttribute="trailing" constant="20" id="fVD-60-oIJ"/>
                             <constraint firstItem="rye-fG-Q5W" firstAttribute="top" secondItem="uwf-0o-jmX" secondAttribute="top" constant="186" id="ful-W2-Aep"/>
-                            <constraint firstItem="HW5-EN-fvo" firstAttribute="leading" secondItem="uwf-0o-jmX" secondAttribute="leadingMargin" id="iKU-N2-LRv"/>
-                            <constraint firstItem="HW5-EN-fvo" firstAttribute="trailing" secondItem="uwf-0o-jmX" secondAttribute="trailingMargin" id="jX6-cU-lUD"/>
                             <constraint firstItem="qVD-4v-9Zm" firstAttribute="leading" secondItem="uwf-0o-jmX" secondAttribute="leadingMargin" id="nJd-0J-oPj"/>
                             <constraint firstItem="rye-fG-Q5W" firstAttribute="leading" secondItem="yBg-iy-XWM" secondAttribute="leading" id="nWT-BN-7qP"/>
                             <constraint firstItem="qVD-4v-9Zm" firstAttribute="trailing" secondItem="uwf-0o-jmX" secondAttribute="trailingMargin" id="rwx-VV-9fU"/>
@@ -261,6 +272,7 @@
                         <outlet property="imeTextField" destination="qVD-4v-9Zm" id="oJv-wx-hGy"/>
                         <outlet property="saveBarButton" destination="pac-TU-5Ae" id="zUS-cM-Z1L"/>
                         <outlet property="saveButton" destination="HW5-EN-fvo" id="Rce-9u-nmi"/>
+                        <outlet property="triOsamSedam" destination="rye-fG-Q5W" id="Unv-e3-POA"/>
                         <segue destination="hII-ne-H3z" kind="unwind" identifier="unwindToContactList" unwindAction="unwindToContactList:" id="AGU-0C-X3q"/>
                     </connections>
                 </viewController>
