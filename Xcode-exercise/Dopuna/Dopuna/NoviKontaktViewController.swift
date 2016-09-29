@@ -74,6 +74,10 @@ class NoviKontaktViewController: UIViewController, UINavigationControllerDelegat
     // MARK: Functions
     func alert() {
         let alert = UIAlertController(title: "Pažnja", message: "Obavezno je unijeti broj telefona", preferredStyle: .Alert)
+        
+        // OK button color
+        alert.view.tintColor = Kontakt.myColor
+        
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
         alert.addAction(OKAction)
         self.presentViewController(alert, animated: true, completion: nil)

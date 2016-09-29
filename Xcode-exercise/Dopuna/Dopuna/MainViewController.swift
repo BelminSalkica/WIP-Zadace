@@ -145,8 +145,11 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, Cont
     // Alert
     func alertMessage() {
         let alertController = UIAlertController(title: "Napomena", message: "Odaberite kontakt.", preferredStyle: .Alert)
+        // OK Button color
+        alertController.view.tintColor = Kontakt.myColor
         
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        
         alertController.addAction(defaultAction)
         
         presentViewController(alertController, animated: true, completion: nil)
