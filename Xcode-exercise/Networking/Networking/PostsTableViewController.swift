@@ -30,7 +30,7 @@ class PostsTableViewController: UITableViewController {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {2
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
     
@@ -40,8 +40,6 @@ class PostsTableViewController: UITableViewController {
         
         // Fetch apropriate user for data source layout
         let post = posts[indexPath.row]
-        
-        // Configure the cell...
         cell.textLabel?.text = post.title
         cell.detailTextLabel?.text = post.body
         
