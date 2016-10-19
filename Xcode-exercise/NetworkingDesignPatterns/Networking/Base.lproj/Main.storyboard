@@ -78,8 +78,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="8Dp-e0-aXd">
-                                <frame key="frameInset" minX="16" minY="89" width="103" height="581"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="8Dp-e0-aXd">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VG9-pI-BTb">
                                         <constraints>
@@ -325,7 +324,7 @@
                     <navigationItem key="navigationItem" title="Add new user" id="rv6-Ps-Ek3">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="rCN-Px-b4H">
                             <connections>
-                                <action selector="saveUser:" destination="pTX-Ue-7mJ" id="z3j-6s-eUj"/>
+                                <action selector="saveUser:" destination="pTX-Ue-7mJ" id="V1O-C0-Wcj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -339,6 +338,7 @@
                         <outlet property="longitudeTextField" destination="Ap8-pU-728" id="XvD-Fi-f6Y"/>
                         <outlet property="nameTextField" destination="duZ-ku-Gum" id="L8t-x9-hTo"/>
                         <outlet property="phoneTextField" destination="jTe-PI-9TZ" id="dSW-ph-dRn"/>
+                        <outlet property="saveButton" destination="rCN-Px-b4H" id="033-Za-gIb"/>
                         <outlet property="streetTextField" destination="YU4-1L-7jZ" id="0Nb-8V-REM"/>
                         <outlet property="suiteTextField" destination="C8m-yz-8b8" id="T73-X5-Qyb"/>
                         <outlet property="userNameTextField" destination="ihX-nm-D4y" id="xwZ-8A-2cf"/>

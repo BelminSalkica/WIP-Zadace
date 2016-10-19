@@ -24,39 +24,30 @@ class UserViewController: UIViewController {
     @IBOutlet weak var companyNameTextField: UITextField!
     @IBOutlet weak var catchPhraseTextField: UITextField!
     @IBOutlet weak var bsTextField: UITextField!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     // MARK: Functions
-    func alert() {
-        let alert = UIAlertController(title: "Alert", message: "You must fill in all the fields.", preferredStyle: .Alert)
+    func alert(message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .Alert)
         
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
         alert.addAction(OKAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    
-    // MARK: Actions
-    @IBAction func saveUser(sender: UIBarButtonItem) {
-        if nameTextField.text?.isEmpty ?? true {
-            alert()
-        }
-        if emailTextField.text?.isEmpty ?? true {
-            alert()
-        }
-        // MARK: Saving
+    func saveUsers() {
         var newUserId = 0
         if let lastUser = Users.shared.users.last?.id {
             newUserId += lastUser
         }
-        
         
         let geo = Geo(lat: latitudeTextField.text!, lng: longitudeTextField.text!)
         
@@ -70,4 +61,19 @@ class UserViewController: UIViewController {
         
         navigationController?.popViewControllerAnimated(true)
     }
+    func checkValidInput() {
+        if nameTextField.text?.isEmpty ?? true {
+            alert("You didn't enter your name")
+        }
+        if emailTextField.text?.isEmpty ?? true {
+            alert("You didn't enter your email")
+        } else {
+            saveUsers()
+        }
+    }
+    // MARK: Actions
+    @IBAction func saveUser(sender: UIBarButtonItem) {
+        checkValidInput()
+    }
+    
 }
