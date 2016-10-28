@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE79853E1DB8DE2B002792AF /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE79853D1DB8DE2B002792AF /* UsersTableViewCell.swift */; };
 		DED7C2B61DB79F6A000CF44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7C2B51DB79F6A000CF44A /* AppDelegate.swift */; };
 		DED7C2B81DB79F6A000CF44A /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7C2B71DB79F6A000CF44A /* UsersViewController.swift */; };
 		DED7C2BB1DB79F6A000CF44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED7C2B91DB79F6A000CF44A /* Main.storyboard */; };
@@ -31,7 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DE79853D1DB8DE2B002792AF /* UsersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 		DED7C2B21DB79F6A000CF44A /* 1910_11_MapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1910_11_MapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED7C2B51DB79F6A000CF44A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DED7C2B71DB79F6A000CF44A /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				DED7C2B71DB79F6A000CF44A /* UsersViewController.swift */,
-				DE79853D1DB8DE2B002792AF /* UsersTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -243,7 +240,6 @@
 				DED7C2B81DB79F6A000CF44A /* UsersViewController.swift in Sources */,
 				DED7C2B61DB79F6A000CF44A /* AppDelegate.swift in Sources */,
 				DED7C2DA1DB7DF97000CF44A /* Address.swift in Sources */,
-				DE79853E1DB8DE2B002792AF /* UsersTableViewCell.swift in Sources */,
 				DED7C2DC1DB7DFBB000CF44A /* Company.swift in Sources */,
 				DED7C2D81DB7DF71000CF44A /* User.swift in Sources */,
 				DED7C2DE1DB7DFCF000CF44A /* Geo.swift in Sources */,
