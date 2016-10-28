@@ -20,8 +20,11 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oYt-f1-m6g">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="270" id="Mw5-QC-X5q"/>
+                                    <constraint firstAttribute="height" constant="276" id="Bli-fM-D7H"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lhD-ig-Z7Q"/>
+                                </connections>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5AC-q6-Qz9">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,17 +54,21 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JRE-Lr-1jq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="h7x-6D-bes"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="oYt-f1-m6g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="N7a-5b-wMd"/>
-                            <constraint firstItem="oYt-f1-m6g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RlZ-Qj-Ggz"/>
-                            <constraint firstItem="5AC-q6-Qz9" firstAttribute="trailing" secondItem="oYt-f1-m6g" secondAttribute="trailing" id="YdZ-X3-zPF"/>
-                            <constraint firstItem="5AC-q6-Qz9" firstAttribute="leading" secondItem="oYt-f1-m6g" secondAttribute="leading" id="Zms-vq-oZG"/>
-                            <constraint firstAttribute="trailing" secondItem="oYt-f1-m6g" secondAttribute="trailing" id="eM8-4H-4Fx"/>
-                            <constraint firstItem="5AC-q6-Qz9" firstAttribute="top" secondItem="oYt-f1-m6g" secondAttribute="bottom" constant="-1" id="uc7-jJ-S3u"/>
-                            <constraint firstItem="5AC-q6-Qz9" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="udS-Ja-1ia"/>
+                            <constraint firstItem="5AC-q6-Qz9" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="BR2-yJ-mrV"/>
+                            <constraint firstAttribute="trailing" secondItem="oYt-f1-m6g" secondAttribute="trailing" id="DYT-KN-9am"/>
+                            <constraint firstItem="5AC-q6-Qz9" firstAttribute="trailing" secondItem="oYt-f1-m6g" secondAttribute="trailing" id="Omr-Hw-TXk"/>
+                            <constraint firstItem="5AC-q6-Qz9" firstAttribute="leading" secondItem="oYt-f1-m6g" secondAttribute="leading" id="cr2-Si-wNa"/>
+                            <constraint firstItem="5AC-q6-Qz9" firstAttribute="top" secondItem="oYt-f1-m6g" secondAttribute="bottom" id="dAp-US-p4o"/>
+                            <constraint firstItem="oYt-f1-m6g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mqP-BX-lc8"/>
+                            <constraint firstItem="oYt-f1-m6g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ogr-0H-7Hy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Users" id="ZzD-Zg-1BN">

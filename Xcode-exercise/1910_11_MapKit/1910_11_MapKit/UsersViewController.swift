@@ -21,9 +21,6 @@ class UsersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Table view delegate and data source
-        tableView.delegate = self
-        tableView.dataSource = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,7 +81,7 @@ class UsersViewController: UIViewController {
         annotation.subtitle = subtitle
         
         mapView.addAnnotation(annotation)
-        mapView.delegate = self
+
     }
     func requestUsers() {
         let url = URL(string: "http://jsonplaceholder.typicode.com/users")!
@@ -166,7 +163,6 @@ class UsersViewController: UIViewController {
                             }
                         }
                         self.users.append(user)
-                        self.putUsersOnMap(user: user)
                     }
                     DispatchQueue.main.sync {
                         self.tableView.reloadData()
@@ -218,6 +214,10 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
         let user = users[indexPath.row]
+        
+        for user in users {
+            putUsersOnMap(user: user)
+        }
         
         if let firstUser = users.first {
             showUserLocation(user: firstUser)
