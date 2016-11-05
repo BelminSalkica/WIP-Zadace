@@ -11,6 +11,7 @@ import UIKit
 class Users: NSObject {
     static let shared = Users()
     
+    var user = User()
     var users = [User]()
     
     private override init() {

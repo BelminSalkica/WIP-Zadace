@@ -33,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		313956401DCE394400952795 /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		DE82E7311DC695F100965FAF /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		DE82E7331DC6962200965FAF /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		DE82E7351DC697AB00965FAF /* ServerCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerCommunication.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 				DED7C2DD1DB7DFCF000CF44A /* Geo.swift */,
 				DE82E7331DC6962200965FAF /* Users.swift */,
 				DE82E7351DC697AB00965FAF /* ServerCommunication.swift */,
+				313956401DCE394400952795 /* Gradient.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -186,7 +188,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = WIP;
 				TargetAttributes = {
 					DED7C2B11DB79F6A000CF44A = {
@@ -251,6 +253,7 @@
 				DED7C2B81DB79F6A000CF44A /* UsersViewController.swift in Sources */,
 				DED7C2B61DB79F6A000CF44A /* AppDelegate.swift in Sources */,
 				DED7C2DA1DB7DF97000CF44A /* Address.swift in Sources */,
+				313956411DCE394400952795 /* Gradient.swift in Sources */,
 				DED7C2DC1DB7DFBB000CF44A /* Company.swift in Sources */,
 				DED7C2D81DB7DF71000CF44A /* User.swift in Sources */,
 				DE82E7361DC697AB00965FAF /* ServerCommunication.swift in Sources */,
@@ -314,6 +317,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -364,6 +368,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -35,6 +35,9 @@ class UsersViewController: UIViewController {
     }
     
     // MARK: Functions
+    func displayUser() {
+        performSegue(withIdentifier: "UserViewController", sender: self)
+    }
     func refreshData() {
         users = Users.shared.users
         tableView.reloadData()
@@ -47,6 +50,7 @@ class UsersViewController: UIViewController {
         locationManager.startUpdatingLocation()
     }
     func showUserLocation(user: User) {
+        Users.shared.user = user
         var cordinate = CLLocationCoordinate2D()
         
         if let lat = user.address?.geo?.lat, let lng = user.address?.geo?.lng {
@@ -85,6 +89,9 @@ class UsersViewController: UIViewController {
         if let street = user.address?.street {
             subtitle += street
         }
+        if let firstUser = users.first {
+            showUserLocation(user: firstUser)
+        }
         annotation.subtitle = subtitle
         mapView.addAnnotation(annotation)
 
@@ -100,7 +107,7 @@ extension UsersViewController {
 // MARK: Location Manager delegate methods
 extension UsersViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations.last)
+        print(locations.last!)
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
@@ -118,6 +125,10 @@ extension UsersViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Pin")
         annotationView.canShowCallout = true
+        
+        let detailButton = UIButton(type: .detailDisclosure)
+        detailButton.addTarget(self, action: #selector(UsersViewController.displayUser), for: .touchUpInside)
+        annotationView.rightCalloutAccessoryView = detailButton
         return annotationView
     }
 }
@@ -139,11 +150,6 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         for user in users {
             putUsersOnMap(user: user)
         }
-        
-        if let firstUser = users.first {
-            showUserLocation(user: firstUser)
-        }
-        
         cell.textLabel?.text = user.name
         
         if let userAdress = user.address {
